@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<head>
+    {% block linkfile %}
+    <meta charset="UTF-8">
+    <title>World Clock</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" />
+    <!-- <script type="text/javascript" src="{% static 'js/index.js' %}"></script> -->
+
+    {% endblock %}
+
+
+    {% block extrahead %}
+    {% endblock%}
+
+</head>
+
+
+
+<body>
+    {% block content %}
+
+    <div class="container">
+        <div class="bg-light">
+            <div class="container py-5">
+                <div class="row h-100 align-items-center py-5">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 animate__animated animate__bounceInDown animate__slower">Welcome to</h1>
+                        <header class="header">
+                            <nav class="navbar navbar-expand-lg navbar-light py-3">
+                                <div class="container animate__animated animate__shakeX animate__slower">
+                                    <section>
+                                        <div class="content">
+                                            <h2>WORLD CLOCK</h2>
+                                            <h2>WORLD CLOCK</h2>
+                                        </div>
+                                    </section>
+
+                                </div>
+                            </nav>
+                        </header>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end animate__animated animate__bounceInRight animate__slower" style="padding-top:100px;">
+            <a style="text-decoration:none" href="{% url 'home' %}">
+                <button class="c-button c-button--gooey"> Click me
+                    <div class="c-button__blobs">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    </div>
+                  </button>
+                  <svg style="display: block; height: 0; width: 0;" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur result="blur" stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+                        <feColorMatrix result="goo" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" mode="matrix" in="blur"></feColorMatrix>
+                        <feBlend in2="goo" in="SourceGraphic"></feBlend>
+                      </filter>
+                    </defs>
+                  </svg>
+            </a>
+
+        </div>
+
+
+
+
+        <div class="py-5 inner">
+            <div class="container py-5">
+                <div class="row mb-4">
+                    <div class="col-lg-6">
+                        <h2 class="display-4 font-weight-light animate__animated animate__bounceInLeft animate__slower">Meet <b>Our </b> Team Members </h2>
+                        <!-- <p class="font-italic text-muted"></p> -->
+                    </div>
+                </div>
+
+                <div class="row text-center animate__animated animate__bounceInUp animate__slower" style="padding-left:10px;">
+                    <!-- Team item-->
+                    <div class="col-xl-3 col-sm-6 mb-5 zoom1">
+                        <div class="bg-white rounded shadow-sm py-5 px-4" style="border: 2px solid black;"><img
+                                src="{% static "images/niranjan.jpg" %}" alt="Niranjan Kumar Chauhan" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm zoom">
+                            <h5 class="mb-0">Niranjan</h5><span class="small text-uppercase text-muted">IT | DTU</span>
+                            <ul class="social mb-0 list-inline mt-3">
+                                <li class="list-inline-item"><a href="https://github.com/niranjanchauhan" class="btn btn-square btn-outline-secondary rounded-circle"
+                                        target="_blank"><i class="fa fa-github"></i></a></li>
+                                <li class="list-inline-item"><a
+                                        href="https://www.linkedin.com/in/niranjan-kumar-chauhan-9153b6208/"
+                                        class="btn btn-square btn-outline-secondary rounded-circle" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                               
+                                <li class="list-inline-item"><a href="https://www.instagram.com/ritesh_itschauhan/"
+                                        class="btn btn-square btn-outline-secondary rounded-circle" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <!-- <li class="list-inline-item"><a href="#" class="social-link" target="_blank"><i class="fa fa-facebook-f"></i></a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End-->
+
+                    <!-- Team item-->
+                    <div class="col-xl-3 col-sm-6 mb-5 zoom1">
+                        <div class="bg-white rounded shadow-sm py-5 px-4" style="border: 2px solid black;"><img
+                                src="{% static "images/abdul.jpg" %}" alt="Abdul Qavi" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm zoom">
+                            <h5 class="mb-0">ABDUL</h5><span
+                                class="small text-uppercase text-muted">EE | DTU</span>
+                            <ul class="social mb-0 list-inline mt-3">
+                                <li class="list-inline-item"><a href="https://github.com/dbrider05" class="btn btn-square btn-outline-secondary rounded-circle"
+                                        target="_blank"><i class="fa fa-github"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/abdul-qavi-935098259"
+                                        class="btn btn-square btn-outline-secondary rounded-circle" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                               
+                                <li class="list-inline-item"><a href="https://instagram.com/abdulqavi_05?igshid=ZDc4ODBmNjlmNQ==/"
+                                        class="btn btn-square btn-outline-secondary rounded-circle" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <!-- <li class="list-inline-item"><a href="#" class="social-link" target="_blank"><i class="fa fa-facebook-f"></i></a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Team item-->
+                    <div class="col-xl-3 col-sm-6 mb-5 zoom1">
+                        <div class="bg-white rounded shadow-sm py-5 px-4" style="border: 2px solid black;"><img
+                                src="{% static "images/ravi.jpg" %}" alt="Ravi Kumar" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm zoom">
+                            <h5 class="mb-0">RAVI</h5><span
+                                class="small text-uppercase text-muted">IT | DTU</span>
+                            <ul class="social mb-0 list-inline mt-3">
+                                <li class="list-inline-item"><a href="https://github.com/RAVIKUMARDTU" class="btn btn-square btn-outline-secondary rounded-circle"
+                                        target="_blank"><i class="fa fa-github"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/ravi-kb/"
+                                        class="btn btn-square btn-outline-secondary rounded-circle" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+
+                                <li class="list-inline-item"><a href="https://www.instagram.com/ravibhatia_01/"
+                                        class="btn btn-square btn-outline-secondary rounded-circle" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <!-- <li class="list-inline-item"><a href="#" class="social-link" target="_blank"><i class="fa fa-facebook-f"></i></a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+    {% endblock %}
+
+</body>
